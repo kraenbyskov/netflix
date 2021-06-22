@@ -13,17 +13,11 @@ const FetchMyData = (setState, categori) => {
 
 
 function Banner() {
-
-
     const [movieState, setMovieState] = useState()
     const [categori, setCategori] = useState("popular")
-
-
     useEffect(() => {
         FetchMyData(setMovieState, categori)
     }, [categori])
-
-
 
     const settings = {
         dots: true,
@@ -32,8 +26,6 @@ function Banner() {
         slidesToShow: 1,
         slidesToScroll: 1
     }
-
-    console.log(movieState)
 
     return (
         <Slider {...settings}>
