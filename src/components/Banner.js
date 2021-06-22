@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-
+import Slide from "./Slide"
 
 const FetchMyData = (setState, categori) => {
     fetch(`https://api.themoviedb.org/3/movie/${categori}?api_key=7c105b21789fdf773ab798b1c284f40e&language=en-US&page=1`)
@@ -37,11 +37,9 @@ function Banner() {
 
     return (
         <Slider {...settings}>
-            {movieState && movieState.map((movie) => {
-                <div>
-
-                </div>
-            })}
+            {movieState && movieState.results.map((movie) => (
+                <Slide movie={movie} />
+            ))}
         </Slider>
 
     )
