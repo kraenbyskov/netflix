@@ -2,12 +2,15 @@ import React from 'react'
 import styled from "styled-components"
 
 const Nav = styled.div`
+    position: fixed;
     width:100%;
-    height: 60px;
+    height: 80px;
     display:inline-flex;
     justify-content:space-between;
     align-items:center;
-    position:relative;
+    z-index:1000;
+    background-color:rgba(20,20,20, 0.2);
+    border-bottom: 2px solid rgba(100,100,100, 0.2);
     ul {
        display:inline-flex;
        justify-content:space-around;
@@ -31,7 +34,10 @@ const Logo = styled.div`
     text-transform:uppercase;
     font-weight:600;
     font-size:35px;
+    text-shadow:3px 3px 10px rgba(227,21,33,0.5), 3px 3px 30px rgba(227,21,33,0.3);
 `
+
+
 
 
 function Navbar() {

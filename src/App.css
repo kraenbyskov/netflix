@@ -8,6 +8,7 @@
     --dark-blue : #16151a;
     --yellow : #e7c65d;
     --white : #f6f7f2;
+    --black : #000000;
 
     --background : var(--dark-blue);
     --primary : var(--red);
